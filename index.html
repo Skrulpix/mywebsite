@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Raphael Stocker</title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <meta name="viewport" content="width_device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="top">
+            <p class="top-text">Raphael Stocker</p>
+        </div>
+
+        <div class="text">
+            <h1>Welcome</h1>
+            <p>This site is under construction</p>
+        </div>
+
+        <div class="slideshow">
+            <img src="images/image1.jpg" alt="Image 1" class="image1" class="show">
+            <img src="images/image2.jpg" alt="Image 2" class="image2">
+            <img src="images/image3.jpg" alt="Image 3" class="image3">
+            <img src="images/image4.jpg" alt="Image 4" class="image4">
+            <img src="images/image5.jpg" alt="Image 5" class="image5">
+        </div>
+
+        <div id="footer">
+            <a id="imageLink" href="">Image Link</a>
+        </div>
+
+        <script>
+        const slideshow = document.querySelector('.slideshow');
+        const images = slideshow.querySelectorAll('img');
+        const imageLink = document.getElementById('imageLink');
+        let currentImage = 0;
+
+        function showNextImage() {
+            images[currentImage].classList.remove('show');
+            currentImage = (currentImage + 1) % images.length;
+            if (currentImage === 0) {
+                currentImage = 1;
+            }
+            images[currentImage].classList.add('show');
+
+            updateLink(currentImage);
+        }
+
+        function updateLink(index) {
+            switch (index) {
+                case 0:
+                    imageLink.href = "https://pixabay.com/photos/forest-trees-fog-conifers-pine-3622519/";
+                    break;
+                case 1:
+                    imageLink.href = "https://pixabay.com/photos/higan-cherry-spring-cherry-blossom-7862490/";
+                    break;
+                case 2:
+                    imageLink.href = "https://pixabay.com/photos/indiana-dunes-state-park-beach-1848559/";
+                    break;
+                case 3:
+                    imageLink.href = "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/";
+                    break;
+                case 4:
+                    imageLink.href = "https://pixabay.com/photos/snow-landscape-trees-7646952/";
+                    break;
+                default:
+                imageLink.href = "Image";
+                break;
+            }
+        }
+
+        setInterval(showNextImage, 20000);
+
+        images[currentImage].classList.add('show');
+
+        updateLink(currentImage);
+        </script>
+    </body>
+</html>
