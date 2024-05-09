@@ -58,6 +58,10 @@ body, html {
     .welcome {
         font-size: 1.5em;
     }
+
+    .top-text {
+        font-size: 25px;
+    }
 }
 
 .slideshow {
