@@ -29,6 +29,48 @@ body, html {
     user-select: none;
 }
 
+.text {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    text-align: left;
+    user-select: none;
+}
+
+.welcome {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        color: white;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        text-align: center;
+        user-select: none;
+    }
+    
+    .welcome {
+        font-size: 1.5em;
+    }
+}
+
 .slideshow {
     position: relative;
     height: 100%;
@@ -49,21 +91,6 @@ body, html {
 
 .slideshow img.show {
     opacity: 1;
-}
-
-.text {
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-    text-align: left;
-    user-select: none;
 }
 
 #footer {
